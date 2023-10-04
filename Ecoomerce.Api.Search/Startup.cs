@@ -1,16 +1,13 @@
 using ECommerce.Api.Search.Interfaces;
 using ECommerce.Api.Search.Services;
+using Ecoomerce.Api.Search.Interfaces;
+using Ecoomerce.Api.Search.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Ecoomerce.Api.Search
 {
@@ -27,6 +24,15 @@ namespace Ecoomerce.Api.Search
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddScoped<ISearchService, SearchService>();
+      services.AddScoped<IOrdersService, OrdersService>();
+
+      services.AddHttpClient("OrderService", config =>
+      {
+        //Récupération le EndPoint de MS Orders
+        config.BaseAddress = new Uri(Configuration["Services:Orders"]);
+      }
+      );
+
       services.AddControllers();
     }
 
@@ -39,9 +45,7 @@ namespace Ecoomerce.Api.Search
       }
 
       app.UseRouting();
-
       app.UseAuthorization();
-
       app.UseEndpoints(endpoints =>
       {
         endpoints.MapControllers();
