@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Api.Products.Controllers
 {
-  [Route("api/products")]
   [ApiController]
+  [Route("api/products")]
+
   public class ProductsController : ControllerBase
   {
     private readonly IProductsProvider productsProvider;
@@ -29,5 +30,19 @@ namespace Ecommerce.Api.Products.Controllers
       else
         return NotFound();
     }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetProdductByIdAsync(int id)
+    {
+      var result = await productsProvider.GetProductByIdAsync(id);
+      if (result.IsSuccess)
+      {
+        return Ok(result.Product);
+      }
+      else
+        return NotFound();
+    }
+
+
+
   }
 }
