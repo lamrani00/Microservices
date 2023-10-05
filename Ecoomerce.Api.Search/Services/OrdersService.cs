@@ -1,5 +1,5 @@
-﻿using ECommerce.Api.Search.Models;
-using Ecoomerce.Api.Search.Interfaces;
+﻿using Ecommerce.Api.Search.Interfaces;
+using Ecommerce.Api.Search.Models;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections;

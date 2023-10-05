@@ -1,9 +1,9 @@
-﻿using ECommerce.Api.Search.Interfaces;
-using ECommerce.Api.Search.Models;
+﻿using Ecommerce.Api.Search.Interfaces;
+using Ecommerce.Api.Search.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
-namespace ECommerce.Api.Search.Controllers
+namespace Ecommerce.Api.Search.Controllers
 {
     [ApiController]
     [Route("api/search")]

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ECommerce.Api.Search.Models
+namespace Ecommerce.Api.Search.Models
 {
     public class Order
     {

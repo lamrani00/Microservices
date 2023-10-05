@@ -1,10 +1,10 @@
-﻿using ECommerce.Api.Search.Models;
+﻿using Ecommerce.Api.Search.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Ecoomerce.Api.Search.Interfaces
+namespace Ecommerce.Api.Search.Interfaces
 {
   public interface IOrdersService
   {

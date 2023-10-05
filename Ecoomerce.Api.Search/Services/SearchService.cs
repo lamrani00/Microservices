@@ -1,11 +1,10 @@
-﻿using ECommerce.Api.Search.Interfaces;
-using Ecoomerce.Api.Search.Interfaces;
+﻿using Ecommerce.Api.Search.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ECommerce.Api.Search.Services
+namespace Ecommerce.Api.Search.Services
 {
   public class SearchService : ISearchService
   {
@@ -15,6 +14,7 @@ namespace ECommerce.Api.Search.Services
     {
       this.orderService = orderService;
     }
+    // le SearchResults est de type dynamic car on sait pas le resultat de retour.
     public async Task<(bool IsSuccess, dynamic SearchResults)> SearchAsync(int customerId)
     {
       await Task.Delay(1);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ECommerce.Api.Search.Models
+namespace Ecommerce.Api.Search.Models
 {
     public class SearchTerm
     {

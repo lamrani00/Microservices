@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Api.Customers", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Api.Orders", "Ecommerce.Api.Orders\Ecommerce.Api.Orders.csproj", "{FD5A08BF-8575-4565-9431-4E5CFAD8A582}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecoomerce.Api.Search", "Ecoomerce.Api.Search\Ecoomerce.Api.Search.csproj", "{B57C7E07-703C-4572-9C9E-63DC493423A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecommerce.Api.Search", "Ecoomerce.Api.Search\Ecommerce.Api.Search.csproj", "{B57C7E07-703C-4572-9C9E-63DC493423A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

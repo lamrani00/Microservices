@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ECommerce.Api.Search.Interfaces
+namespace Ecommerce.Api.Search.Interfaces
 {
     public interface ISearchService
     {

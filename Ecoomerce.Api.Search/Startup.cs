@@ -1,5 +1,5 @@
-using ECommerce.Api.Search.Interfaces;
-using ECommerce.Api.Search.Services;
+using Ecommerce.Api.Search.Interfaces;
+using Ecommerce.Api.Search.Services;
 using Ecoomerce.Api.Search.Interfaces;
 using Ecoomerce.Api.Search.Services;
 using Microsoft.AspNetCore.Builder;
