@@ -41,8 +41,6 @@ namespace ECommerce.Api.Products.Tests
       Assert.Null(product.ErrorMessage);
     }
 
-
-
     [Fact]
     // Valide Id
     public async Task GetProductReturnsProductUsingValidId()
