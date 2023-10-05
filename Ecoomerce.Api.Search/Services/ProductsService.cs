@@ -1,5 +1,5 @@
 ﻿using Ecommerce.Api.Search.Models;
-using Ecoomerce.Api.Search.Interfaces;
+using Ecommerce.Api.Search.Interfaces;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Ecoomerce.Api.Search.Services
+namespace Ecommerce.Api.Search.Services
 {
   public class ProductsService : IProductsService
   {
@@ -24,7 +24,7 @@ namespace Ecoomerce.Api.Search.Services
     {
       try
       {
-        var client = httpClientFactory.CreateClient("ProductsService");
+        var client = httpClientFactory.CreateClient("ProductService");
         var response = await client.GetAsync("api/products");
         if (response.IsSuccessStatusCode)
         {

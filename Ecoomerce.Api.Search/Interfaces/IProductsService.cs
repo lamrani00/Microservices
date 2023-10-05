@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Ecoomerce.Api.Search.Interfaces
+namespace Ecommerce.Api.Search.Interfaces
 {
   public interface IProductsService
   {

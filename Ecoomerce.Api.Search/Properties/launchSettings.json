@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Ecoomerce.Api.Search": {
+    "Ecommerce.Api.Search": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

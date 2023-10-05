@@ -1,4 +1,4 @@
-﻿using Ecommerce.Api.Search.Interfaces;
+﻿ using Ecommerce.Api.Search.Interfaces;
 using Ecommerce.Api.Search.Models;
 using Microsoft.Extensions.Logging;
 using System;
@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Ecoomerce.Api.Search.Services
+namespace Ecommerce.Api.Search.Services
 {
   public class OrdersService : IOrdersService
   {

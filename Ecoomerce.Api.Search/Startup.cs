@@ -1,7 +1,7 @@
 using Ecommerce.Api.Search.Interfaces;
 using Ecommerce.Api.Search.Services;
-using Ecoomerce.Api.Search.Interfaces;
-using Ecoomerce.Api.Search.Services;
+using Ecommerce.Api.Search.Interfaces;
+using Ecommerce.Api.Search.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 
-namespace Ecoomerce.Api.Search
+namespace Ecommerce.Api.Search
 {
   public class Startup
   {
@@ -25,13 +25,20 @@ namespace Ecoomerce.Api.Search
     {
       services.AddScoped<ISearchService, SearchService>();
       services.AddScoped<IOrdersService, OrdersService>();
-
+      services.AddScoped<ICustomersService, CustomersService>();
+      services.AddScoped<IProductsService, ProductsService>();
+      //Récupération le EndPoint de MS Orders
       services.AddHttpClient("OrderService", config =>
       {
-        //Récupération le EndPoint de MS Orders
         config.BaseAddress = new Uri(Configuration["Services:Orders"]);
-      }
-      );
+      });
+      //Récupération le EndPoint de MS Products
+      services.AddHttpClient("ProductService", config =>
+      {
+        config.BaseAddress = new Uri(Configuration["Services:Products"]);
+      });
+
+
 
       services.AddControllers();
     }
