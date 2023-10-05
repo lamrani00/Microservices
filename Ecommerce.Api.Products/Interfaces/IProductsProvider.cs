@@ -12,7 +12,7 @@ namespace Ecommerce.Api.Products.Interfaces
     ///   Renvoie un tuple
     /// </summary>
     /// <returns></returns>
-    Task<(bool IsSuccess, IEnumerable<Product> Products, string ErrorMessag)> GetProductAsync();
+    Task<(bool IsSuccess, IEnumerable<Product> Products, string ErrorMessage)> GetProductAsync();
     /// <summary>
     /// Renvoi un produit  
     /// </summary>
