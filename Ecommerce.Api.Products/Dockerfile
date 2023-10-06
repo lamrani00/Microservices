@@ -7,7 +7,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0-nanoserver-1803 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Ecommerce.Api.Products/Ecommerce.Api.Products.csproj", "Ecommerce.Api.Products/"]
 RUN dotnet restore "Ecommerce.Api.Products/Ecommerce.Api.Products.csproj"
