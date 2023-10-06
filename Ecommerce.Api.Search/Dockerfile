@@ -1,10 +1,10 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-nanoserver-1803 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0-nanoserver-1803 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["Ecommerce.Api.Search/Ecommerce.Api.Search.csproj", "Ecoomerce.Api.Search/"]
 RUN dotnet restore "Ecommerce.Api.Search/Ecommerce.Api.Search.csproj"
