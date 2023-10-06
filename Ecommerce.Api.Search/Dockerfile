@@ -6,10 +6,10 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["Ecoomerce.Api.Search/Ecommerce.Api.Search.csproj", "Ecoomerce.Api.Search/"]
-RUN dotnet restore "Ecoomerce.Api.Search/Ecommerce.Api.Search.csproj"
+COPY ["Ecommerce.Api.Search/Ecommerce.Api.Search.csproj", "Ecoomerce.Api.Search/"]
+RUN dotnet restore "Ecommerce.Api.Search/Ecommerce.Api.Search.csproj"
 COPY . .
-WORKDIR "/src/Ecoomerce.Api.Search"
+WORKDIR "/src/Ecommerce.Api.Search"
 RUN dotnet build "Ecommerce.Api.Search.csproj" -c Release -o /app/build
 
 FROM build AS publish

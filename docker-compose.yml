@@ -23,4 +23,4 @@ services:
     image: ${DOCKER_REGISTRY-}ecommerceapisearch
     build:
       context: .
-      dockerfile: Ecoomerce.Api.Search/Dockerfile
+      dockerfile: Ecommerce.Api.Search/Dockerfile
