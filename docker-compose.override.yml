@@ -30,4 +30,3 @@ services:
       
     ports:
       - "6004:80"
-
